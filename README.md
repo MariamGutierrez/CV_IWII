@@ -17,6 +17,13 @@ Breve documentación del proyecto: estructura, instrucciones de despliegue y cam
 python -m http.server 8000
 # luego abrir http://localhost:8000/ en el navegador
 ```
+**Despligue (ya en dominio)**
+- Link donde se ve el dominio ya publicado:
+
+```bash
+    https://cv-iwii.vercel.app/
+# Link montado en vercel
+```
 
 - Usando Live Server en VS Code: abrir la carpeta y ejecutar extensión Live Server.
 
