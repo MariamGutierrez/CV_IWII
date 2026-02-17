@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mariam Daniela Gutierrez Alfonso</title>
+    <link rel="icon" href="assets/images/icon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="site-title"><a href="#">Mariam Gutierrez</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger" aria-hidden="true">☰</span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#about">Perfil</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle" aria-expanded="false" aria-controls="competencias-submenu">Competencias ▾</button>
+                        <ul class="submenu" id="competencias-submenu">
+                            <li><a href="#hard-skills">Técnicas</a></li>
+                            <li><a href="#soft-skills">Blandas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#education">Estudios</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#horario">Horario</a></li>
+                    <li><a href="#organigrama">Organigrama</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="photo-contact">
+            <img src="assets/images/profile.jpg" alt="Foto de Mariam Daniela Gutierrez Alfonso" class="profile-photo">
+            <div class="contact">
+                <h2>Mariam Daniela Gutierrez Alfonso</h2>
+                <p>Email: <a href="mailto:mariam@example.com">mariam@example.com</a></p>
+                <p>Tel: +34 600 000 000</p>
+                <p>Ubicación: Ciudad, País</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Descripción del perfil</h2>
+            <p>Profesional orientado a resultados con experiencia en desarrollo web y diseño de interfaces. Interés por soluciones accesibles y eficientes.</p>
+        </section>
+
+        <section id="hard-skills">
+            <h2>Competencias técnicas</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Frameworks: React, Node.js</li>
+                <li>Control de versiones: Git</li>
+            </ul>
+        </section>
+
+        <section id="soft-skills">
+            <h2>Competencias blandas</h2>
+            <ul>
+                <li>Comunicación efectiva</li>
+                <li>Trabajo en equipo</li>
+                <li>Resolución de problemas</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Información académica</h2>
+            <ul>
+                <li>Grado en Ingeniería / Formación relevante — Universidad / Centro (Año)</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experiencia laboral</h2>
+            <div class="carousel" id="experience-carousel" aria-roledescription="carousel">
+                <button class="carousel-btn prev" aria-label="Anterior experiencia">‹</button>
+                <div class="carousel-track" role="list">
+                    <article class="card" role="listitem">
+                        <h3>Cargo — Empresa A</h3>
+                        <p>2023–2025 · Lideré el desarrollo frontend y mejoré la accesibilidad del producto.</p>
+                    </article>
+                    <article class="card" role="listitem">
+                        <h3>Cargo — Empresa B</h3>
+                        <p>2020–2023 · Implementé componentes reutilizables y pipelines de CI.</p>
+                    </article>
+                </div>
+                <button class="carousel-btn next" aria-label="Siguiente experiencia">›</button>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos destacados</h2>
+            <div class="carousel" id="projects-carousel" aria-roledescription="carousel">
+                <button class="carousel-btn prev" aria-label="Anterior proyecto">‹</button>
+                <div class="carousel-track" role="list">
+                    <article class="card" role="listitem">
+                        <img src="assets/images/project-a.jpg" alt="Captura Proyecto A" class="project-image">
+                        <div class="card-content">
+                            <h3>Proyecto A</h3>
+                            <p>App web para gestión de tareas con autenticación y PWA.</p>
+                        </div>
+                    </article>
+                    <article class="card" role="listitem">
+                        <img src="assets/images/project-b.jpg" alt="Captura Proyecto B" class="project-image">
+                        <div class="card-content">
+                            <h3>Proyecto B</h3>
+                            <p>Visualizador de datos con D3 y componentes React.</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel-btn next" aria-label="Siguiente proyecto">›</button>
+            </div>
+        </section>
+
+        <section id="horario" class="embed-section">
+            <h2>Horario</h2>
+            <div class="embed-container">
+                <iframe src="horario.html" title="Horario de actividades" loading="lazy" style="width:100%;height:640px;border:0;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></iframe>
+            </div>
+        </section>
+
+        <section id="organigrama" class="embed-section">
+            <h2>Organigrama</h2>
+            <div class="embed-container">
+                <iframe src="organigrama.html" title="Organigrama de la jornada" loading="lazy" style="width:100%;height:640px;border:0;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/carousel.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© 2026 Mariam Gutierrez. Todos los derechos reservados.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#privacy">Política de privacidad</a></li>
+                    <li><a href="#terms">Términos de uso</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
+

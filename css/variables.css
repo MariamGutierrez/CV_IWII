@@ -1,0 +1,30 @@
+:root {
+  --bg: #f7f8fb;
+  --text: #222222;
+  --primary: #0b6cff;
+  --muted: #666666;
+  --card: #ffffff;
+  --radius: 10px;
+  --gap: 16px;
+  --max-width: 1000px;
+}
+
+/* Colores por materia (usar en las tarjetas del horario) */
+:root {
+  --subject-web: #ffd166;
+  --subject-data: #06d6a0;
+  --subject-design: #4cc9f0;
+  --subject-algo: #ef476f;
+  --subject-default: #e6e9ee;
+}
+
+/* Colores por categoría del organigrama */
+:root {
+  --cat-academica: #0b6cff; /* azul primario */
+  --cat-investigacion: #06b6a4; /* verde mar */
+  --cat-tutoria: #f59e0b; /* amarillo */
+  --cat-administrativa: #ef4444; /* rojo claro */
+  --cat-desarrollo: #7c3aed; /* púrpura */
++
+  --org-line: rgba(11,108,255,0.12);
+}

@@ -1,0 +1,26 @@
+@media (max-width:700px){ .calendar-grid{grid-template-columns:repeat(7,1fr)} .container{padding:16px} }
+
+/* Media Queries: adaptación a móvil para el horario */
+@media (max-width:800px){
+	.schedule-grid{grid-template-columns:90px 1fr;}
+	.schedule-grid > .schedule-day-header{display:none}
+}
+
+@media (max-width:480px){
+	.schedule-grid{grid-template-columns:1fr;}
+	.time-label{display:none}
+}
+
+/* Mobile cards view */
+@media (max-width:480px){
+	.schedule-grid{display:none}
+	.day-cards{display:flex; flex-direction:column; gap:12px; margin-top:12px}
+	.day-card{background:var(--card); border-radius:8px; padding:12px}
+	.day-card h3{margin:0 0 8px 0}
+	.day-card-list{display:flex; flex-direction:column; gap:8px}
+	.day-card-item{padding:10px; border-radius:8px; position:relative; color:#111}
+	.day-card-item .status{position:absolute; top:8px; right:8px}
+	.day-card-title{font-weight:700}
+	.day-card-meta{color:var(--muted); font-size:0.92rem}
+	.day-card-empty{color:var(--muted); text-align:center; padding:10px}
+}

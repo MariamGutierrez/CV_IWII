@@ -1,0 +1,23 @@
+.calendar{display:flex; flex-direction:column; gap:12px}
+.calendar-header{display:flex; justify-content:space-between; align-items:center}
+.calendar-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:8px}
+.day-name{font-weight:600; padding:8px; text-align:center}
+.day{padding:12px; min-height:56px; background:var(--card); border-radius:8px; text-align:center}
+.day.disabled{opacity:0.35}
+.day.today{outline:3px solid var(--primary)}
+
+/* Subject color classes using variables (Variables CSS) */
+.sub-web{background:linear-gradient(180deg,var(--subject-web), color-mix(in srgb, var(--subject-web) 75%, #ffffff));}
+.sub-data{background:linear-gradient(180deg,var(--subject-data), color-mix(in srgb, var(--subject-data) 75%, #ffffff));}
+.sub-design{background:linear-gradient(180deg,var(--subject-design), color-mix(in srgb, var(--subject-design) 75%, #ffffff));}
+.sub-algo{background:linear-gradient(180deg,var(--subject-algo), color-mix(in srgb, var(--subject-algo) 75%, #ffffff));}
+.sub-default{background:var(--subject-default)}
+
+/* Status badges */
+.status{position:absolute; top:8px; right:8px; font-size:0.75rem; padding:4px 8px; border-radius:999px; background:rgba(255,255,255,0.85); backdrop-filter: blur(4px)}
+.status.active{color:var(--primary); border:1px solid rgba(11,108,255,0.12)}
+.status.virtual{color:#0b8a6f}
+.status.cancelled{color:#c41e3a}
+
+/* Transiciones (dejar aquí para que cargue después de pseudoclases) */
+.class-block{transition:transform .18s ease, box-shadow .18s ease}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Horario - Mariam Gutierrez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/horario.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <section class="schedule card" id="schedule" aria-label="Horario semanal">
+            <h2>Horario semanal</h2>
+            <div class="schedule-legend" aria-hidden="true">
+                <div class="legend-item"><span class="legend-sample" style="background:var(--subject-web)"></span> Web</div>
+                <div class="legend-item"><span class="legend-sample" style="background:var(--subject-data)"></span> Data</div>
+                <div class="legend-item"><span class="legend-sample" style="background:var(--subject-design)"></span> Diseño</div>
+                <div class="legend-item"><span class="legend-sample" style="background:var(--subject-algo)"></span> Algoritmos</div>
+            </div>
+
+            <div class="schedule-grid" role="table" aria-label="Horario de clase">
+                <!-- columna de horas -->
+                <div class="schedule-header"></div>
+                <div class="schedule-day-header">Lunes</div>
+                <div class="schedule-day-header">Martes</div>
+                <div class="schedule-day-header">Miércoles</div>
+                <div class="schedule-day-header">Jueves</div>
+                <div class="schedule-day-header">Viernes</div>
+
+                <!-- filas de tiempo (ejemplo) -->
+                <div class="time-label">08:00</div>
+                <div class="class-block sub-web" style="grid-column:2;grid-row:2/4" role="gridcell">
+                    <div class="status active">Activo</div>
+                    <div class="class-title">WEB201 - Desarrollo Web</div>
+                    <div class="class-meta">Prof. García · Aula 12</div>
+                </div>
+                <div class="class-block sub-data" style="grid-column:3;grid-row:2/3" role="gridcell">
+                    <div class="status virtual">Virtual</div>
+                    <div class="class-title">DAT110 - Bases de datos</div>
+                    <div class="class-meta">Dra. López · Online</div>
+                </div>
+                <div class="class-block sub-design" style="grid-column:4;grid-row:2/3" role="gridcell">
+                    <div class="status active">Activo</div>
+                    <div class="class-title">DES320 - Diseño UI</div>
+                    <div class="class-meta">M. Pérez · Aula 7</div>
+                </div>
+                <div class="class-block sub-algo" style="grid-column:5;grid-row:2/4" role="gridcell">
+                    <div class="status cancelled">Cancelado</div>
+                    <div class="class-title">ALG101 - Algoritmos</div>
+                    <div class="class-meta">Prof. Ruiz · Aula 3</div>
+                </div>
+
+                <div class="time-label">10:00</div>
+                <div></div>
+                <div class="class-block sub-web" style="grid-column:3;grid-row:4/5" role="gridcell">
+                    <div class="status active">Activo</div>
+                    <div class="class-title">WEB201 - Taller</div>
+                    <div class="class-meta">Prof. García · Aula 15</div>
+                </div>
+                <div></div>
+                <div class="class-block sub-design" style="grid-column:6;grid-row:4/6" role="gridcell">
+                    <div class="status active">Activo</div>
+                    <div class="class-title">DES320 - Proyecto</div>
+                    <div class="class-meta">M. Pérez · Aula 7</div>
+                </div>
+
+                <div class="time-label">12:00</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Vista alternativa para móvil: tarjetas por día (rellenada por JS) -->
+            <div class="day-cards" id="dayCards" aria-label="Actividades por día" hidden></div>
+        </section>
+    </main>
+
+    <script src="js/ui.js"></script>
+</body>
+</html>

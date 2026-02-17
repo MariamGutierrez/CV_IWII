@@ -1,0 +1,52 @@
+/* Organigrama vertical: usa variables, flexbox, grid, positioning y animaciones */
+.org-wrapper{display:flex; gap:24px; align-items:flex-start; justify-content:space-between}
+.org-column{position:relative; flex:1 1 640px; display:flex; flex-direction:column; align-items:center; padding:24px}
+
+/* Line central del organigrama (connectors) */
+.org-column::before{content:""; position:absolute; left:50%; transform:translateX(-50%); top:20px; bottom:20px; width:2px; background:var(--org-line)}
+
+.org-node{width:70%; background:var(--card); border-radius:10px; padding:14px 16px; margin:18px 0; position:relative; box-shadow:0 4px 12px rgba(12,24,48,0.06); display:flex; flex-direction:column; align-items:flex-start; opacity:0; transform:translateY(-8px); animation:orgFade .42s ease forwards}
+.org-node::after{content:""; position:absolute; left:calc(50% - 6px); top:-22px; width:12px; height:12px; border-radius:50%; background:var(--card); box-shadow:0 0 0 4px rgba(255,255,255,0.6), 0 0 0 6px var(--org-line)}
+
+.org-title{font-weight:700; margin-bottom:6px}
+.org-meta{font-size:0.92rem; color:var(--muted)}
+
+/* Identity visual por categoría (usar variables) */
+.cat-academica{border-left:6px solid var(--cat-academica)}
+.cat-investigacion{border-left:6px solid var(--cat-investigacion)}
+.cat-tutoria{border-left:6px solid var(--cat-tutoria)}
+.cat-administrativa{border-left:6px solid var(--cat-administrativa)}
+.cat-desarrollo{border-left:6px solid var(--cat-desarrollo)}
+
+/* Legend */
+.org-legend{min-width:180px}
+.org-legend h3{margin-top:0}
+.org-legend ul{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+.legend-badge{display:inline-block; width:14px; height:14px; border-radius:4px; margin-right:8px}
+
+/* Animaciones CSS: aparición progresiva */
+@keyframes orgFade{to{opacity:1; transform:translateY(0)}}
+.org-node:nth-child(1){animation-delay:0.06s}
+.org-node:nth-child(2){animation-delay:0.14s}
+.org-node:nth-child(3){animation-delay:0.22s}
+.org-node:nth-child(4){animation-delay:0.30s}
+.org-node:nth-child(5){animation-delay:0.38s}
+
+/* Positioning: pequeños conectores horizontales desde el punto central */
+.org-node .org-meta::before{content:""; position:absolute; left:calc(50% + 10%); top:50%; transform:translateY(-50%); width:1px; height:1px}
+
+/* Flexbox/Grid combos for larger screens */
+@media (min-width:1000px){
+	.org-wrapper{display:grid; grid-template-columns: 1fr 220px; align-items:start}
+	.org-column{align-items:center}
+}
+
+/* Responsive: en móvil, centrar y reducir paddings */
+@media (max-width:600px){
+	.org-wrapper{gap:12px}
+	.org-column{padding:12px}
+	.org-node{width:100%; padding:12px}
+	.org-column::before{left:8px; transform:none}
+	.org-node::after{left:2px}
+	.org-node{margin:12px 0}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Organigrama - Mariam Gutierrez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/organigrama.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <h1 class="site-title"><a href="index.html">Mariam Gutierrez</a></h1>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card organigrama" id="organigrama" aria-label="Organigrama vertical de jornada">
+      <h2>Organigrama de la jornada</h2>
+
+      <p class="muted">Descripción: flujo vertical que muestra Inicio, Clases, Recesos, Actividades complementarias y Fin de jornada. Cada actividad tiene una categoría con identidad visual.</p>
+
+      <div class="org-wrapper">
+        <div class="org-column">
+          <div class="org-node cat-administrativa" data-category="Administrativa">
+            <div class="org-title">Inicio de jornada</div>
+            <div class="org-meta">Recepción · Coordinación</div>
+          </div>
+
+          <div class="org-node cat-academica" data-category="Académica">
+            <div class="org-title">Clases</div>
+            <div class="org-meta">Sesiones teóricas y prácticas</div>
+          </div>
+
+          <div class="org-node cat-desarrollo" data-category="Desarrollo personal">
+            <div class="org-title">Recesos</div>
+            <div class="org-meta">Descanso y actividades personales</div>
+          </div>
+
+          <div class="org-node cat-tutoria" data-category="Tutoría">
+            <div class="org-title">Actividades complementarias</div>
+            <div class="org-meta">Tutorías, talleres</div>
+          </div>
+
+          <div class="org-node cat-investigacion" data-category="Investigación">
+            <div class="org-title">Fin de jornada</div>
+            <div class="org-meta">Resumen y cierre</div>
+          </div>
+        </div>
+
+        <aside class="org-legend" aria-hidden="true">
+          <h3>Categorías</h3>
+          <ul>
+            <li><span class="legend-badge" style="background:var(--cat-academica)"></span> Académica</li>
+            <li><span class="legend-badge" style="background:var(--cat-investigacion)"></span> Investigación</li>
+            <li><span class="legend-badge" style="background:var(--cat-tutoria)"></span> Tutoría</li>
+            <li><span class="legend-badge" style="background:var(--cat-administrativa)"></span> Administrativa</li>
+            <li><span class="legend-badge" style="background:var(--cat-desarrollo)"></span> Desarrollo personal</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
